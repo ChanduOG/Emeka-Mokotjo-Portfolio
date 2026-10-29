@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emeka Mokotjo – Web developer and business systems builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--abyss:#080808;--deep:#111111;--border:#222222;--foam:#F5F5F5;--steel:#9A9A9A;--amber:#00D4FF;--amber2:#00AFCB;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--abyss);color:var(--foam);font:400 1.05rem/1.6 "Instrument Sans",system-ui,sans-serif}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+#bar{position:fixed;left:0;top:0;width:3px;height:100%;background:var(--amber);transform-origin:top;transform:scaleY(0);z-index:5}
+header{position:fixed;top:0;left:0;right:0;z-index:4;display:flex;justify-content:space-between;align-items:center;padding:calc(1rem + env(safe-area-inset-top,0px)) 6vw 1rem;font-weight:500}
+header a{color:var(--foam);text-decoration:none;margin-left:1.4rem}
+header a:first-child{margin:0;font-family:Syne,sans-serif;font-weight:800}
+header a:hover{color:var(--amber)}
+a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+main{position:relative;z-index:1}
+section{min-height:100vh;display:flex;align-items:center;padding:14vh 6vw 10vh}
+.c{max-width:540px;background:rgba(17,17,17,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:1.8rem 1.8rem 2rem;border:1px solid var(--border);border-left:2px solid var(--amber)}
+.r{justify-content:flex-end}
+h1{font:800 clamp(3.4rem,13vw,11rem)/.88 Syne,sans-serif;margin:0 0 1.6rem;letter-spacing:-.03em}
+h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+h1 .ch{display:inline-block}
+h2{font:600 clamp(2rem,5vw,3.6rem)/1 Syne,sans-serif;margin:0 0 1rem;letter-spacing:-.02em}
+h3{font:600 clamp(1.8rem,3.6vw,2.8rem)/1.05 Syne,sans-serif;margin:0 0 .4rem}
+p{margin:0 0 1rem;max-width:62ch}
+.lead{font-size:clamp(1.1rem,2vw,1.4rem);max-width:30ch;color:var(--foam)}
+.mut{color:var(--steel)}
+.btn{display:inline-block;padding:.8rem 1.4rem;background:var(--amber);color:var(--abyss);font-weight:500;text-decoration:none;margin:.4rem .8rem .4rem 0}
+.btn.o{background:none;color:var(--foam);border:1px solid var(--steel)}
+.btn:hover{background:var(--amber2)}.btn.o:hover{background:none;border-color:var(--amber);color:var(--amber)}
+dl{margin:0}dt{font:600 1.05rem Syne,sans-serif;color:var(--amber);margin-top:1rem}dd{margin:.2rem 0 0}
+.tl{border-left:1px solid var(--steel);margin-left:.3rem}
+.tl div{padding:0 0 1.4rem 1.2rem}.tl b{font:600 1.15rem Syne,sans-serif;display:block}.tl small{color:var(--steel);font-size:.95rem}
+.tl p{margin:.4rem 0 0}
+#work{display:block;padding:0;overflow:hidden;height:100vh}
+#work .hd{position:absolute;top:calc(12vh + env(safe-area-inset-top,0px));left:6vw;z-index:2}
+.track{display:flex;width:max-content;height:100%;padding:0 6vw 0 6vw;align-items:flex-end}
+.pj{width:min(78vw,430px);margin-right:3rem;padding:0 0 12vh 1.6rem;border-left:1px solid var(--steel);background:linear-gradient(to top,rgba(8,8,8,.8),rgba(8,8,8,0))}
+.pj:first-child{margin-left:min(78vw,380px)}
+.pj .k{color:var(--steel);margin:0 0 .8rem}
+.pj .t{color:var(--amber);font-size:.95rem}
+.pj a{color:var(--foam)}
+.pj a:hover{color:var(--amber)}
+@media (max-width:700px){.pj:first-child{margin-left:0}#work .hd{position:static;padding:calc(12vh + env(safe-area-inset-top,0px)) 6vw 0}#work{display:flex;flex-direction:column}.track{flex:1}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div id="bar" aria-hidden="true"></div>
+<header>
+  <a href="#top">Emeka Mokotjo</a>
+  <nav><a href="#experience">Experience</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section id="top">
+  <div>
+    <h1 aria-label="Emeka Mokotjo"><span class="ln nm">Emeka</span><span class="ln nm">Mokotjo</span></h1>
+    <p class="lead">Web developer and business systems builder. I ship client sites, dashboards and AI automations.</p>
+    <a class="btn" href="#work">See the projects</a><a class="btn o" href="#contact">Get in touch</a>
+  </div>
+</section>
+
+<section id="about" class="r">
+  <div class="c">
+    <h2>Sites, dashboards and workflows that run a business</h2>
+    <p>I build responsive websites, client platforms and internal tools, then connect them with APIs and n8n automations. I take a project from requirements and design through integrations, testing and deployment.</p>
+    <p>I have sales experience and know how to discuss clients’ needs.</p>
+    <p class="mut">Studying BSc Information Technology (Security &amp; Network Engineering) at Eduvos, 2026–2028. freeCodeCamp certifications in responsive web design and JavaScript algorithms.</p>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="c">
+    <h2>What I build with</h2>
+    <dl>
+      <dt>Frontend</dt><dd>JavaScript, TypeScript, React, Next.js, Tailwind CSS, shadcn/ui, HTML5, CSS3, Figma-to-code</dd>
+      <dt>Backend and integrations</dt><dd>Supabase, PostgreSQL, Clerk, Cloudinary, REST APIs, Paystack</dd>
+      <dt>AI and automation</dt><dd>n8n, Groq API, AI API integration, prompt engineering, AI-assisted development</dd>
+      <dt>Workflow</dt><dd>Git, GitHub, VS Code, Figma, DevTools, cross-browser testing, code reviews</dd>
+    </dl>
+  </div>
+</section>
+
+<section id="experience" class="r">
+  <div class="c">
+    <h2>Where I’ve worked</h2>
+    <div class="tl">
+      <div><b>Compuden</b><small>Current</small>
+        <p>Website management, IT marketing, Shopify and e-commerce operations, and digital growth.</p></div>
+      <div><b>Founder, Be-Mo Solutions</b><small>Nov 2025 to present, Bloemfontein</small>
+        <p>Web development and business systems practice focused on AI-enabled operations, automation and client platforms. Built the brand and portfolio that bring in clients.</p></div>
+      <div><b>Salesperson, PageJoy</b><small>About three months</small>
+        <p>Spoke with prospects, worked out their needs and presented solutions.</p></div>
+      <div><b>Freelance web developer</b><small>Dec 2024 to Nov 2025</small>
+        <p>Delivered informational sites, marketing sites and analytics dashboards, built mobile-first and deployed live.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="hd"><h2>Selected projects</h2><p class="mut">Scroll sideways.</p></div>
+  <div class="track">
+    <article class="pj"><h3>TraderEdge</h3><p class="k">Client project</p>
+      <p>Trading journal and analytics platform, from roadmap to delivery. Dashboards, trade analytics and AI-assisted insights.</p>
+      <p class="t">Next.js, React, Tailwind, shadcn/ui, Supabase, Recharts, Groq API, Paystack</p>
+      <a href="https://tradersedges.vercel.app" target="_blank" rel="noopener">View live site</a></article>
+    <article class="pj"><h3>BEMOEDGE</h3><p class="k">Personal project</p>
+      <p>A trading analytics platform I used to prototype the dashboard patterns and components that later went into client work.</p>
+      <p class="t">Next.js, React, Tailwind, Supabase</p>
+      <a href="https://bemoedge.vercel.app" target="_blank" rel="noopener">View live site</a></article>
+    <article class="pj"><h3>Be-Mo internal systems</h3><p class="k">Concept and roadmap</p>
+      <p>An AI knowledge assistant, workflow automation and an operations dashboard, designed to show clients what automation can do.</p>
+      <p class="t">n8n, AI APIs, workflow automation</p></article>
+    <article class="pj"><h3>ZIYA’s Hair &amp; Beauty</h3><p class="k">Client marketing site</p>
+      <p>Reworked the visual theme, added custom motion, WhatsApp click-to-chat and the client’s business details before launch.</p>
+      <p class="t">Next.js, React, Tailwind, Motion</p>
+      <a href="https://hairandbeautypalor-main.vercel.app" target="_blank" rel="noopener">View live site</a></article>
+    <article class="pj"><h3>Gemstone Media</h3><p class="k">Live project</p>
+      <p>A live website project.</p>
+      <a href="https://gemstonemedia.vercel.app/" target="_blank" rel="noopener">View live site</a></article>
+    <article class="pj"><h3>ImoState</h3><p class="k">Information site</p>
+      <p>A fully responsive guide to the Free State with semantic markup, tested across devices.</p>
+      <p class="t">HTML, CSS, JavaScript</p>
+      <a href="https://imostatefreestate.netlify.app" target="_blank" rel="noopener">View live site</a></article>
+    <article class="pj"><h3>FXKillerz</h3><p class="k">Front-end website</p>
+      <p>A mobile-first site with clean structure and JavaScript interactivity.</p>
+      <p class="t">HTML, CSS, JavaScript</p>
+      <a href="https://fxkillerz.netlify.app" target="_blank" rel="noopener">View live site</a></article>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="c">
+    <h2>Need a site or a workflow built?</h2>
+    <p>Tell me what you’re trying to do and I’ll reply with how I’d build it.</p>
+    <a class="btn" href="mailto:boemokotjo@gmail.com">Email me</a><a class="btn o" href="https://linkedin.com/in/emeka-mokotjo-dev" target="_blank" rel="noopener">LinkedIn</a>
+    <p class="mut" style="margin-top:1rem">boemokotjo@gmail.com<br><a href="tel:+27693024630" style="color:inherit">+27 69 302 4630</a><br>Bloemfontein, Free State, South Africa</p>
+  </div>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const $=s=>document.querySelector(s);
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const S=[...document.querySelectorAll('main>section')],N=S.length,K=.96;
+const st={t:0};
+
+/* hero type: one orchestrated entrance */
+document.querySelectorAll('.nm').forEach(el=>{
+  el.innerHTML=[...el.textContent].map(c=>'<span class="ch">'+c+'</span>').join('');
+});
+
+/* horizontal projects */
+const tr=$('.track');
+gsap.to(tr,{x:()=>-Math.max(0,tr.scrollWidth-innerWidth),ease:'none',
+  scrollTrigger:{trigger:'#work',start:'top top',end:()=>'+='+Math.max(1,tr.scrollWidth-innerWidth),pin:true,scrub:reduce||.8,invalidateOnRefresh:true,refreshPriority:1}});
+
+/* camera progress: node i is centred while section i is on screen */
+S.slice(0,-1).forEach((s,i)=>gsap.fromTo(st,{t:i/(N-1)},{t:(i+1)/(N-1),ease:'none',immediateRender:i===0,
+  scrollTrigger:{trigger:s,start:'top top',endTrigger:S[i+1],end:'top top',scrub:reduce||.8}}));
+
+if(!reduce){
+  gsap.from('.nm .ch',{yPercent:115,rotate:7,duration:1.2,ease:'expo.out',stagger:.04,delay:.25});
+}
+
+/* nav: scroll to section, accounting for the pinned track */
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const el=$(a.getAttribute('href'));if(!el)return;e.preventDefault();
+  const y=el.id==='top'?0:el.getBoundingClientRect().top+scrollY;
+  scrollTo({top:y,behavior:reduce?'auto':'smooth'});
+}));
+
+/* three.js scene */
+try{
+  const cv=$('#gl'),renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  const scene=new THREE.Scene();
+  scene.fog=new THREE.FogExp2(0x080808,.035);
+  const cam=new THREE.PerspectiveCamera(55,1,.1,200);
+  const size=()=>{renderer.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()};
+  size();addEventListener('resize',size);
+
+  const path=new THREE.CatmullRomCurve3([[0,0,0],[6,2,-14],[-6,-2,-30],[7,3,-46],[-5,0,-62],[6,-3,-78],[0,0,-94]].map(p=>new THREE.Vector3(...p)));
+  scene.add(new THREE.Mesh(new THREE.TubeGeometry(path,240,.035,6,false),new THREE.MeshBasicMaterial({color:0x00d4ff,transparent:true,opacity:.45})));
+
+  const geos=[new THREE.IcosahedronGeometry(1.7,1),new THREE.OctahedronGeometry(1.9),new THREE.DodecahedronGeometry(1.6),
+    new THREE.BoxGeometry(2.3,2.3,2.3),new THREE.TorusKnotGeometry(1.1,.32,90,10),new THREE.TorusGeometry(1.5,.5,10,28)];
+  const nodes=geos.map((g,i)=>{
+    const grp=new THREE.Group(),
+      line=new THREE.LineBasicMaterial({color:i%2?0xf5f5f5:0x00d4ff,transparent:true}),
+      fill=new THREE.MeshBasicMaterial({color:0x00afcb,transparent:true});
+    grp.add(new THREE.Mesh(g,fill),new THREE.LineSegments(new THREE.EdgesGeometry(g,20),line));
+    const side=i%2?-1:1,p=path.getPointAt(i/(N-1)*K);
+    grp.position.set(p.x+side*(innerWidth<700?2.2:3.6),p.y+.2,p.z-6);
+    scene.add(grp);return{grp,line,fill};
+  });
+
+  const pkt=new THREE.Mesh(new THREE.SphereGeometry(.16,16,16),new THREE.MeshBasicMaterial({color:0x00d4ff}));
+  scene.add(pkt);
+
+  const n=900,pos=new Float32Array(n*3);
+  for(let i=0;i<n;i++){const p=path.getPointAt(Math.random());
+    pos.set([p.x+(Math.random()-.5)*28,p.y+(Math.random()-.5)*20,p.z+(Math.random()-.5)*14],i*3)}
+  const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  scene.add(new THREE.Points(pg,new THREE.PointsMaterial({color:0x9a9a9a,size:.07,transparent:true,opacity:.7})));
+
+  if(!reduce)gsap.from(scene.fog,{density:.14,duration:2.4,ease:'power2.out'});
+
+  const m={x:0,y:0},sm={x:0,y:0},bar=$('#bar');
+  addEventListener('pointermove',e=>{m.x=e.clientX/innerWidth-.5;m.y=e.clientY/innerHeight-.5});
+  gsap.ticker.add(time=>{
+    const t=st.t*K,p=path.getPointAt(t),q=path.getPointAt(Math.min(t+.03,1));
+    sm.x+=(m.x-sm.x)*.05;sm.y+=(m.y-sm.y)*.05;
+    cam.position.set(p.x+sm.x*1.4,p.y-sm.y*1,p.z);cam.lookAt(q);
+    pkt.position.copy(path.getPointAt(Math.min(t+.05,1)));
+    nodes.forEach((o,i)=>{
+      const k=Math.max(0,1-Math.abs(st.t-i/(N-1))*(N-1)*1.1);
+      o.grp.scale.setScalar(.6+k*.6);o.grp.rotation.set(time*.2+i,time*.3+i,0);
+      o.line.opacity=.3+k*.7;o.fill.opacity=.05+k*.18;
+    });
+    bar.style.transform='scaleY('+st.t+')';
+    renderer.render(scene,cam);
+  });
+}catch(e){const c=$('#gl');if(c)c.style.display='none'}
+</script>
+</body>
+</html>
